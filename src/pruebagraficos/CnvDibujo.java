@@ -53,7 +53,7 @@ public class CnvDibujo extends Canvas {
         
         //se dibuja una ficha        
         g2d.setStroke(new BasicStroke(1));
-        g2d.setColor(Color.BLUE);
+        g2d.setColor(Color.WHITE);
         Ellipse2D.Double ficha = new Ellipse2D.Double(x+(ancho/7), y+(alto/7), ancho-(ancho/4), alto-(alto/4));
         g2d.fill(ficha);        
         g2d.setColor(Color.BLACK);

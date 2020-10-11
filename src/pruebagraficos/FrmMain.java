@@ -13,6 +13,9 @@ import javax.swing.JOptionPane;
  */
 public class FrmMain extends javax.swing.JFrame {
 
+    
+    FrmEsperandoJugadores WaitingPlayers=new FrmEsperandoJugadores();
+    
     CnvDibujo canvas = new CnvDibujo();
     public FrmMain() {
         canvas.setBounds(10, 10, 350, 250);
