@@ -58,9 +58,8 @@
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
-            <Property name="opaque" type="boolean" value="false"/>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/pruebagraficos/button_crear-partidahover (1).png"/>
+              <Image iconType="3" name="/pruebagraficos/imgs/button_crear-partidahover (1).png"/>
             </Property>
           </Properties>
           <Events>

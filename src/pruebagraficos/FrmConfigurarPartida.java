@@ -57,7 +57,7 @@ FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pruebagraficos/imgs/button_crear-partida (1).png"))); // NOI18N
         jButton1.setText("CREAR PARTIDA");
         jButton1.setContentAreaFilled(false);
-        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/pruebagraficos/button_crear-partidahover (1).png"))); // NOI18N
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/pruebagraficos/imgs/button_crear-partidahover (1).png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -80,9 +80,9 @@ FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
         montoApuestaJug1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         montoApuestaJug1.setForeground(new java.awt.Color(255, 255, 255));
         montoApuestaJug1.setText("Monto fijo:");
-        getContentPane().add(montoApuestaJug1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 110, -1));
+        getContentPane().add(montoApuestaJug1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 110, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pruebagraficos/menuprincipal.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pruebagraficos/imgs/menuprincipal.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -110, 870, 1050));
 
         pack();
