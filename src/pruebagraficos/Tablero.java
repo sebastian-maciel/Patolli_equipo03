@@ -5,24 +5,45 @@
  */
 package pruebagraficos;
 
+import java.awt.BasicStroke;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+
 /**
  *
  * @author javie
  */
-public class Tablero {
+public class Tablero extends Canvas {
     
-    iCasilla casillas[];
+    iCasilla []casillas;
     Caña cañas[];
 
-    public Tablero(iCasilla[] casillas, Caña[] cañas) {
+   
+   
+    public void setCasillas(iCasilla[] casillas) {
         this.casillas = casillas;
-        this.cañas = cañas;
     }
     
     
     
     
-    
+    @Override
+    public void paint(Graphics g)
+    {
+        System.out.println("entre");
+         Graphics2D g2d = (Graphics2D)g;
+      //  Casilla a = new Casilla(40,40);
+     //   a.paint(g);
+      this.casillas=new Casilla[32];
+       //for (int i = 0; i < casillas.length; i++) 
+       //{
+      
+        this.casillas[0].paint(g);
+        //}
+    }
     
     
 }

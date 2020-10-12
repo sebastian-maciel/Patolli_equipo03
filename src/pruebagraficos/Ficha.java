@@ -5,6 +5,8 @@
  */
 package pruebagraficos;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -16,10 +18,33 @@ public class Ficha {
      
     List <RegistroMovimiento> registros= new  ArrayList<>();
 iCasilla casilla;
+
+private int x=40;
+private int y=40;
+
+private final int ancho = 40;
+private final int alto = 40;
+private final int movimiento = 40;
+
+
     public Ficha(iCasilla casilla) {
        this.casilla=casilla;
     }
 
+    Ficha() {
+      
+    }
+
+    public void paint(Graphics g) {
+        g.setColor(Color.PINK);
+        g.fillOval(x, y, alto, ancho);
+        //dibujar contorno
+        g.setColor(Color.BLACK);
+        g.drawOval(x, y, alto, ancho);
+    }
+
+
+    
     public List<RegistroMovimiento> getRegistros() {
         return registros;
     }

@@ -5,6 +5,7 @@
  */
 package pruebagraficos;
 
+import java.awt.Graphics;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,12 +16,14 @@ public class FrmMain extends javax.swing.JFrame {
 
     
     FrmEsperandoJugadores WaitingPlayers=new FrmEsperandoJugadores();
+      Tablero tablero = new Tablero();
     
-    CnvDibujo canvas = new CnvDibujo();
+   // CnvDibujo canvas = new CnvDibujo();
     public FrmMain() {
-        canvas.setBounds(10, 10, 350, 250);
-        this.add(canvas);
-        
+        tablero.setBounds(10, 10, 350, 250);
+        this.add(tablero);
+      
+      
         initComponents();
     }
 
@@ -62,6 +65,9 @@ public class FrmMain extends javax.swing.JFrame {
         JOptionPane.showConfirmDialog(this, "Deseas salir?");
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
+   
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -5,16 +5,60 @@
  */
 package pruebagraficos;
 
+import java.awt.Canvas;
+import java.awt.Graphics;
+
 /**
  *
  * @author javie
  */
-public abstract class  iCasilla 
-{
+public abstract class iCasilla extends Canvas {
 
-Ficha fichas[];
+    private int x = 50;
+    private int y = -40;
+    private final int ancho = 40;
+    private final int alto = 40;
 
+    public iCasilla(int x, int y) {
+        this.x = x;
+        this.y = y;
+
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int getAncho() {
+        return ancho;
+    }
+
+    public int getAlto() {
+        return alto;
+    }
+
+
+
+
+   
+
+    @Override
+    public abstract void paint(Graphics g);
 public abstract void analizarJugada();
+
+
 
     
 }

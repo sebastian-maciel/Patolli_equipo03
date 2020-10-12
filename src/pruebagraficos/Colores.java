@@ -9,7 +9,7 @@ package pruebagraficos;
  *
  * @author javie
  */
-public enum Color {
+public enum Colores {
     
      BLANCO("blanco"), 
     AMARILLO("amarillo"), 
@@ -23,32 +23,32 @@ public enum Color {
     
 
 
-    private Color(String color) {
+    private Colores(String color) {
         this.color = color;
       
     }
 
-    public static Color getBLANCO() {
+    public static Colores getBLANCO() {
         return BLANCO;
     }
 
-    public static Color getAMARILLO() {
+    public static Colores getAMARILLO() {
         return AMARILLO;
     }
 
-    public static Color getROJO() {
+    public static Colores getROJO() {
         return ROJO;
     }
 
-    public static Color getNEGRO() {
+    public static Colores getNEGRO() {
         return NEGRO;
     }
 
-    public static Color getGRIS() {
+    public static Colores getGRIS() {
         return GRIS;
     }
 
-    public static Color getAZUL() {
+    public static Colores getAZUL() {
         return AZUL;
     }
 
