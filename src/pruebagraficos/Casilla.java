@@ -20,6 +20,9 @@ public class Casilla extends iCasilla {
         super(x,y);
     }
     
+    public Casilla() {
+       
+    }
     
 
     @Override

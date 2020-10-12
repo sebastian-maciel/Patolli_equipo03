@@ -14,8 +14,8 @@ import java.awt.Graphics;
  */
 public abstract class iCasilla extends Canvas {
 
-    private int x = 50;
-    private int y = -40;
+    private int x = 0;
+    private int y = 0;
     private final int ancho = 40;
     private final int alto = 40;
 
@@ -23,6 +23,10 @@ public abstract class iCasilla extends Canvas {
         this.x = x;
         this.y = y;
 
+    }
+    
+     public iCasilla() {
+       
     }
 
     public int getX() {

@@ -5,6 +5,7 @@
  */
 package pruebagraficos;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 /**
@@ -24,7 +25,11 @@ public class CasillaSemicircular extends iCasilla {
 
     @Override
     public void paint(Graphics g) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         g.setColor(Color.BLACK);
+        g.fillRect(getX(), getY(), getAlto(), getAncho());
+        //dibujar contorno
+        g.setColor(Color.BLACK);
+        g.drawRect(getX(), getY(), getAlto(), getAncho());
     }
     
 }

@@ -20,7 +20,7 @@ public class FrmMain extends javax.swing.JFrame {
     
    // CnvDibujo canvas = new CnvDibujo();
     public FrmMain() {
-        tablero.setBounds(10, 10, 350, 250);
+        tablero.setBounds(10, 10, 800, 800);
         this.add(tablero);
       
       

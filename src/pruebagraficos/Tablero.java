@@ -18,7 +18,7 @@ import java.awt.Rectangle;
  */
 public class Tablero extends Canvas {
     
-    iCasilla []casillas;
+    iCasilla []casillas=new iCasilla[32];
     Caña cañas[];
 
    
@@ -35,15 +35,24 @@ public class Tablero extends Canvas {
     {
         System.out.println("entre");
          Graphics2D g2d = (Graphics2D)g;
-      //  Casilla a = new Casilla(40,40);
-     //   a.paint(g);
-      this.casillas=new Casilla[32];
-       //for (int i = 0; i < casillas.length; i++) 
-       //{
-      
-        this.casillas[0].paint(g);
+        Casilla a = new Casilla(40,40);
+      //  a.paint(g);
+        
+        iCasilla b = new Casilla(40, 40);
+       // b.paint(g);
+     
+      for (int i = 0; i < casillas.length; i++) 
+       {
+       casillas[i]= new Casilla(40, 40+40*i);
+       if(i==16){
+            casillas[i]= new Casilla(60, 40+40*i);
+       }
+       
+       
+      casillas[i].paint(g);
+        
         //}
     }
     
-    
+    }    
 }
