@@ -16,8 +16,8 @@ public abstract class iCasilla extends Canvas {
 Ficha fica[];
     private int x = 0;
     private int y = 0;
-    private final int ancho = 40;
-    private final int alto = 40;
+    private final int ancho = 30;
+    private final int alto = 30;
 
     public iCasilla(int x, int y) {
         this.x = x;
