@@ -22,7 +22,11 @@ public class CasillaCentral extends iCasilla{
     public void analizarJugada() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+/**
+ * este metodo pintara un rectangulo de color amarillo con un 
+ * contorno de color negro, represaentara las casillas centrales
+ * @param g 
+ */
     @Override
     public void paint(Graphics g) {
             g.setColor(Color.YELLOW);

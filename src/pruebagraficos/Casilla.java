@@ -31,7 +31,10 @@ public class Casilla extends iCasilla {
     }
 
    
-
+/**
+ * este metodo dibujara un rectangulo de color rosa con un contorno negro
+ * @param g 
+ */
     @Override
     public void paint(Graphics g) {
           g.setColor(Color.PINK);

@@ -7,7 +7,7 @@ package pruebagraficos;
 
 /**
  *
- * @author javie
+ * @author javier
  */
 public class Apuesta {
     int montoApuesta;

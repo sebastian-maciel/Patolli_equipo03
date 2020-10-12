@@ -10,5 +10,10 @@ package pruebagraficos;
  * @author javie
  */
 public class Caña {
+    static byte  PUNTO; 
     
+    public void lanzar()
+    {
+        System.out.println("lanzando cania...");
+    }
 }

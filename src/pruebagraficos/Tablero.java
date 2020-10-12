@@ -28,7 +28,10 @@ public class Tablero extends Canvas {
     }
     
     
-    
+    public void lanzar()
+    {
+        System.out.println("lanzar cania");
+    }
     
     @Override
     public void paint(Graphics g)
