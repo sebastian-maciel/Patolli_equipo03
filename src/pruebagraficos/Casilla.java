@@ -39,6 +39,8 @@ public class Casilla extends iCasilla {
         //dibujar contorno
         g.setColor(Color.BLACK);
         g.drawRect(getX(), getY(), getAlto(), getAncho());
+        
+       
     }
 
  

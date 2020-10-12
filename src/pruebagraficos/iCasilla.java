@@ -13,7 +13,7 @@ import java.awt.Graphics;
  * @author javie
  */
 public abstract class iCasilla extends Canvas {
-
+Ficha fica[];
     private int x = 0;
     private int y = 0;
     private final int ancho = 40;
