@@ -67,7 +67,7 @@ public class CnvDibujo extends Canvas {
        
         for(int i=0; i<cuantos; i++) {           
            
-            rect.setBounds(x, y, ancho, alto);
+          
              g.setColor(Color.WHITE);
             System.out.println(i);
             if(i==1||i==14)
