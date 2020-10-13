@@ -11,6 +11,7 @@ package pruebagraficos;
  */
 public class FrmMenuPrincipal extends javax.swing.JFrame {
     FrmConfigurarPartida configScreen=new FrmConfigurarPartida();
+    FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
     /**
      * Creates new form FrmIniciarPartida
      */
@@ -82,7 +83,8 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+       waitingplayers.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
