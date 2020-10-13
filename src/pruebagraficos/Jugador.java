@@ -18,6 +18,7 @@ public class Jugador {
     int montoFijo;
     CasillaCentral casillaInicio;
     List<Apuesta> apuestas=new ArrayList<>();
+    Ficha fichas[]= new Ficha[6];
 
     public Jugador(String nombre, boolean turno, int montoFijo,CasillaCentral casillaInicio) {
         this.nombre = nombre;
@@ -33,6 +34,14 @@ public class Jugador {
 
     public void setCasillaInicio(CasillaCentral casillaInicio) {
         this.casillaInicio = casillaInicio;
+    }
+
+    public Ficha[] getFichas() {
+        return fichas;
+    }
+
+    public void setFichas(Ficha[] fichas) {
+        this.fichas = fichas;
     }
 
     

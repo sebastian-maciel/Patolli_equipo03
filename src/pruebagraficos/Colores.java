@@ -5,25 +5,27 @@
  */
 package pruebagraficos;
 
+import java.awt.Color;
+
 /**
  *
  * @author javie
  */
 public enum Colores {
     
-     BLANCO("blanco"), 
-    AMARILLO("amarillo"), 
-    ROJO("rojo"),
-    NEGRO("negro"),
-    GRIS("gris"),
-    AZUL("azul");
+     BLANCO(Color.white), 
+    AMARILLO(Color.YELLOW), 
+    ROJO(Color.RED),
+    NEGRO(Color.BLACK),
+    GRIS(Color.lightGray),
+    AZUL(Color.BLUE);
 
   
-    private String color;
+    private Color color;
     
 
 
-    private Colores(String color) {
+    private Colores(Color color) {
         this.color = color;
       
     }
@@ -52,7 +54,7 @@ public enum Colores {
         return AZUL;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 

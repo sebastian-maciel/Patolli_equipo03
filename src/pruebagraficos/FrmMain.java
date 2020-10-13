@@ -17,13 +17,18 @@ public class FrmMain extends javax.swing.JFrame {
     
     FrmEsperandoJugadores WaitingPlayers=new FrmEsperandoJugadores();
       Tablero tablero = new Tablero();
-    
-   // CnvDibujo canvas = new CnvDibujo();
+      //cse crea jugador
+      Jugador jugador_uno;
+       //
+   // 
     public FrmMain() {
         tablero.setBounds(10, 10, 1280, 1280);
         this.add(tablero);
        this.setExtendedState(this.MAXIMIZED_BOTH);
         initComponents();
+        configurarJugador();
+          desplegarFicha();
+       
     }
 
     @SuppressWarnings("unchecked")
@@ -31,6 +36,7 @@ public class FrmMain extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jButtonAvanzar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,20 +47,31 @@ public class FrmMain extends javax.swing.JFrame {
             }
         });
 
+        jButtonAvanzar.setText("Avanzar");
+        jButtonAvanzar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAvanzarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 362, Short.MAX_VALUE)
-                .addComponent(jButton1))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 350, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonAvanzar, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1)
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonAvanzar)
+                .addContainerGap(232, Short.MAX_VALUE))
         );
 
         pack();
@@ -64,8 +81,41 @@ public class FrmMain extends javax.swing.JFrame {
         JOptionPane.showConfirmDialog(this, "Deseas salir?");
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    
+    private void jButtonAvanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAvanzarActionPerformed
+     // desplegarFicha();
+        avanzar();
+        this.add(tablero);
+        
+    }//GEN-LAST:event_jButtonAvanzarActionPerformed
+
+    public void configurarJugador()
+    {
+       jugador_uno = new Jugador("javier",true,1000, new CasillaCentral(570,280));
+       jugador_uno.fichas[0]= new Ficha();
+       jugador_uno.fichas[0].setColor(Colores.NEGRO);
+        System.out.println("config->"+jugador_uno.fichas[0].getColor().getColor());
    
+        
+       
+       
+    }
+    //le asigna la ficha a la casilla inicial del jugador
+    public void desplegarFicha()
+   {
+       
+        if(jugador_uno.getFichas()[0].getCasilla()==null)
+        {
+           
+            jugador_uno.getCasillaInicio().setFichaUno(jugador_uno.getFichas()[0]);
+            tablero.casillas[9]=jugador_uno.getCasillaInicio();
+        }
+    }
+    
+    
+   public void avanzar()
+   {
+      tablero.moverFicha(jugador_uno.getFichas()[0]);
+   }
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -101,5 +151,6 @@ public class FrmMain extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonAvanzar;
     // End of variables declaration//GEN-END:variables
 }

@@ -43,6 +43,11 @@ public class Casilla extends iCasilla {
         g.setColor(Color.BLACK);
         g.drawRect(getX(), getY(), getAlto(), getAncho());
         
+          if(getFichaUno()!=null){
+            getFichaUno().setX(getX());
+            getFichaUno().setY(getY());
+              getFichaUno().paint(g);
+        }
        
     }
 

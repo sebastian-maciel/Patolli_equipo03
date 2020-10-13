@@ -19,16 +19,24 @@ public class Ficha {
     List <RegistroMovimiento> registros= new  ArrayList<>();
 iCasilla casilla;
 
-private int x=40;
-private int y=40;
+private int x=0;
+private int y=0;
 
-private final int ancho = 40;
-private final int alto = 40;
+private final int ancho = 15;
+private final int alto = 15;
 private final int movimiento = 40;
 
-
+Colores color;
     public Ficha(iCasilla casilla) {
        this.casilla=casilla;
+    }
+ public Ficha(int x,int y) {
+       this.x=x;
+       this.y=y;
+    }
+
+    public Ficha(Colores color) {
+        this.color = color;
     }
 
     Ficha() {
@@ -36,7 +44,7 @@ private final int movimiento = 40;
     }
 
     public void paint(Graphics g) {
-        g.setColor(Color.PINK);
+        g.setColor(this.color.getColor());
         g.fillOval(x, y, alto, ancho);
         //dibujar contorno
         g.setColor(Color.BLACK);
@@ -49,6 +57,33 @@ private final int movimiento = 40;
         return registros;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public Colores getColor() {
+        return color;
+    }
+
+    public void setColor(Colores color) {
+        this.color = color;
+    }
+
+    
+    
+    
     public void setRegistros(List<RegistroMovimiento> registros) {
         this.registros = registros;
     }

@@ -13,7 +13,9 @@ import java.awt.Graphics;
  * @author javie
  */
 public abstract class iCasilla extends Canvas {
-Ficha fica[];
+
+    Ficha fichaUno;
+    Ficha fichaDos;
     private int x = 0;
     private int y = 0;
     private final int ancho = 30;
@@ -24,6 +26,31 @@ Ficha fica[];
         this.y = y;
 
     }
+
+    public iCasilla(Ficha fichaUno) {
+        this.fichaUno = fichaUno;
+       
+    }
+
+    public Ficha getFichaUno() {
+        return fichaUno;
+    }
+
+    public void setFichaUno(Ficha fichaUno) {
+        this.fichaUno = fichaUno;
+    }
+
+    public Ficha getFichaDos() {
+        return fichaDos;
+    }
+
+    public void setFichaDos(Ficha fichaDos) {
+        this.fichaDos = fichaDos;
+    }
+    
+    
+    
+   
     
      public iCasilla() {
        
@@ -53,6 +80,8 @@ Ficha fica[];
         return alto;
     }
 
+  
+    
 
 
 

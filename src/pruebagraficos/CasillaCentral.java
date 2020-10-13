@@ -17,7 +17,12 @@ public class CasillaCentral extends iCasilla{
     public CasillaCentral(int x, int y) {
         super(x, y);
     }
-
+    
+      public CasillaCentral(Ficha fichaUno) {
+        this.fichaUno = fichaUno;
+       
+    }
+     
     @Override
     public void analizarJugada() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -34,7 +39,13 @@ public class CasillaCentral extends iCasilla{
         //dibujar contorno
         g.setColor(Color.BLACK);
         g.drawRect(getX(), getY(), getAlto(), getAncho());
-       
+        
+        if(getFichaUno()!=null){
+            getFichaUno().setX(getX());
+            getFichaUno().setY(getY());
+              getFichaUno().paint(g);
+        }
+    
         
         
     }
