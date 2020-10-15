@@ -3,53 +3,51 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebagraficos;
+package Dominio;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
 
 /**
  *
  * @author javie
  */
-public class Casilla extends iCasilla {
+public class CasillaCentral extends iCasilla{
 
-    public Casilla(int x,int y) {
-        super(x,y);
+    public CasillaCentral(int x, int y) {
+        super(x, y);
     }
     
-    public Casilla() {
+      public CasillaCentral(Ficha fichaUno) {
+        this.fichaUno = fichaUno;
        
     }
-    
-
+     
     @Override
     public void analizarJugada() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-   
 /**
- * este metodo dibujara un rectangulo de color rosa con un contorno negro
+ * este metodo pintara un rectangulo de color amarillo con un 
+ * contorno de color negro, represaentara las casillas centrales
  * @param g 
  */
     @Override
     public void paint(Graphics g) {
-          g.setColor(Color.PINK);
+            g.setColor(Color.YELLOW);
         g.fillRect(getX(), getY(), getAlto(), getAncho());
         //dibujar contorno
         g.setColor(Color.BLACK);
         g.drawRect(getX(), getY(), getAlto(), getAncho());
         
-          if(getFichaUno()!=null){
+        if(getFichaUno()!=null){
             getFichaUno().setX(getX());
             getFichaUno().setY(getY());
               getFichaUno().paint(g);
         }
-       
+    
+        
+        
     }
-
- 
+    
 }

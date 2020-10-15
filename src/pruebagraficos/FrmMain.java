@@ -5,6 +5,11 @@
  */
 package pruebagraficos;
 
+import Dominio.Tablero;
+import Dominio.Jugador;
+import Dominio.Ficha;
+import Dominio.CasillaCentral;
+import Dominio.Colores;
 import java.awt.Graphics;
 import javax.swing.JOptionPane;
 
@@ -15,10 +20,10 @@ import javax.swing.JOptionPane;
 public class FrmMain extends javax.swing.JFrame {
 
     
-    FrmEsperandoJugadores WaitingPlayers=new FrmEsperandoJugadores();
-      Tablero tablero = new Tablero();
+     private FrmEsperandoJugadores WaitingPlayers=new FrmEsperandoJugadores();
+      private Tablero tablero = new Tablero();
       //cse crea jugador
-      Jugador jugador_uno;
+     private Jugador jugador_uno;
        //
    // 
     public FrmMain() {
@@ -96,9 +101,9 @@ public class FrmMain extends javax.swing.JFrame {
     public void configurarJugador()
     {
        jugador_uno = new Jugador("javier",true,1000, new CasillaCentral(570,280));
-       jugador_uno.fichas[0]= new Ficha();
-       jugador_uno.fichas[0].setColor(Colores.NEGRO);
-        System.out.println("config->"+jugador_uno.fichas[0].getColor().getColor());
+       jugador_uno.getFichas()[0]= new Ficha();
+       jugador_uno.getFichas()[0].setColor(Colores.NEGRO);
+        System.out.println("config->"+jugador_uno.getFichas()[0].getColor().getColor());
    
         
        
@@ -112,7 +117,7 @@ public class FrmMain extends javax.swing.JFrame {
         {
            
             jugador_uno.getCasillaInicio().setFichaUno(jugador_uno.getFichas()[0]);
-            tablero.casillas[9]=jugador_uno.getCasillaInicio();
+            tablero.getCasillas()[9]=jugador_uno.getCasillaInicio();
         }
     }
     

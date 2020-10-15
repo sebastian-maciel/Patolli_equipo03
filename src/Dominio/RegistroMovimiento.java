@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebagraficos;
+package Dominio;
 
 /**
  *
  * @author javie
  */
 public class RegistroMovimiento {
-    
-    
-    String casilla;
-    boolean apuesta;
+
+    private String casilla;
+    private boolean apuesta;
 
     public RegistroMovimiento(String casilla, boolean apuesta) {
         this.casilla = casilla;

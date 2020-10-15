@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebagraficos;
+package Dominio;
 
+import Dominio.Ficha;
+import Dominio.CasillaCentral;
+import Dominio.Apuesta;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,19 +16,20 @@ import java.util.List;
  * @author javie
  */
 public class Jugador {
-    String nombre;
-    boolean turno;
-    int montoFijo;
-    CasillaCentral casillaInicio;
-    List<Apuesta> apuestas=new ArrayList<>();
-    Ficha fichas[]= new Ficha[6];
 
-    public Jugador(String nombre, boolean turno, int montoFijo,CasillaCentral casillaInicio) {
+    private String nombre;
+    private boolean turno;
+    private int montoFijo;
+    private CasillaCentral casillaInicio;
+    private List<Apuesta> apuestas = new ArrayList<>();
+    private Ficha fichas[] = new Ficha[6];
+
+    public Jugador(String nombre, boolean turno, int montoFijo, CasillaCentral casillaInicio) {
         this.nombre = nombre;
         this.turno = turno;
         this.montoFijo = montoFijo;
-        this.casillaInicio=casillaInicio;
-        
+        this.casillaInicio = casillaInicio;
+
     }
 
     public CasillaCentral getCasillaInicio() {

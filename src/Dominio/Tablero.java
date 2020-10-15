@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebagraficos;
+package Dominio;
 
+import Dominio.Ficha;
+import Dominio.CasillaCentral;
+import Dominio.Casilla;
+import Dominio.Caña;
 import java.awt.BasicStroke;
 import java.awt.Canvas;
 import java.awt.Color;
@@ -18,8 +22,8 @@ import java.awt.Rectangle;
  */
 public class Tablero extends Canvas {
 
-    iCasilla[] casillas = new iCasilla[68];
-    Caña cañas[];
+    private iCasilla[] casillas = new iCasilla[68];
+    private Caña cañas[];
 
     public void setCasillas(iCasilla[] casillas) {
         this.casillas = casillas;
@@ -29,6 +33,11 @@ public class Tablero extends Canvas {
         System.out.println("lanzar cania");
     }
 
+    /**
+     * el siguiente metodo dibujara un tablero
+     * con 14 casillas por aspa y las 4 del centro
+     * @param g 
+     */
     @Override
     public void paint(Graphics g) {
         
@@ -39,11 +48,11 @@ public class Tablero extends Canvas {
         int m = 0;
         int n = 0;
         int y = 0;
-//se dibuja  
+
 
         for (int i = 0; i < casillas.length; i++) {
             
-            if (i != 9 && i < 9) { //de arriba al centro
+            if (i != 9 && i < 9) { //se dibuja de arriba al centro
               if(casillas[i]==null){
                   
                     casillas[i] = new Casilla(600, 40 + 30 * i);
@@ -155,6 +164,13 @@ public class Tablero extends Canvas {
 
     }
 
+    
+    /**
+     * este metodo recibe la ficha a mover, una vez que encuentra
+     * la casilla en la que esta,se mueve a la siguiente casilla y la borra
+     * de donde estava.
+     * @param ficha 
+     */
     public void moverFicha(Ficha ficha) {
         
         for (int i = 0; i < casillas.length; i++) {
@@ -187,4 +203,10 @@ public class Tablero extends Canvas {
         }
         
     }
+
+    public iCasilla[] getCasillas() {
+        return casillas;
+    }
+    
+    
 }
