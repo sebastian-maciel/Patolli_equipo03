@@ -6,10 +6,15 @@ El videojuego desarrollado en el lenguaje de java representa una adaptación de 
 
 [¡Lee sobre Patolli!](https://drive.google.com/file/d/1UlbamqOIR-MzOyGLdCoA3T5gKfItrnr7/view)
 
+
+![Patollli](https://i.pinimg.com/originals/b1/a8/be/b1a8bea14663c920e4d9925be08eb478.jpg)
+
 ----
 
 ## Futuras caracteristicas del programa
-- Implementara estilo arquitectonico blackboard
-- Seguira los principios de diseño de software
-- Contara con diseño modular
-- Implementara multijugador local
+- Implementará estilo arquitectónico blackboard
+- Seguirá los principios de diseño de software
+- Contará con diseño modular
+- Implementará multijugador local
+
+
