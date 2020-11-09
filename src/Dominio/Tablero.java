@@ -49,13 +49,15 @@ public class Tablero extends Canvas {
         byte m = 0;
         byte n = 0;
         byte y = 0;
-
+            // VER presentacion de sustitucion de liskov o abierto cerrado
+            
         //VARIABLES ( estas variables son el numero de fichas que se dibujaran por aspa depende del tablero elejido )
         //de arriba al cento
-        byte arribaCentro = (byte) ((((casillas.length - 4) / 4) / 2) + 1);
+        byte arribaCentro = (byte) ((((casillas.length - 4) / 4) / 2)+1);
+        System.out.println(casillas.length+"cocaina");
         //del centro a la izquierda
         byte centroIzquierda = (byte) (arribaCentro - 1);
-        byte centroIzquierdaAux = (byte) ((centroIzquierda * 2) + 1);
+        byte centroIzquierdaAux = (byte) ((centroIzquierda * 2) +1);
         // de la izquierda al centro
         byte izquierdaCentro = (byte) (centroIzquierdaAux - 1);
         byte izquierdaCentroAux = (byte) ((izquierdaCentro) + (arribaCentro + 1));
@@ -103,7 +105,7 @@ public class Tablero extends Canvas {
                     casillas[i].paint(g);
                      
                 }
-
+                System.out.println(i+"flag1");
             } else if (i > centroIzquierda && i < centroIzquierdaAux)//del centro a la izquierda
             {
                   
