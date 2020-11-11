@@ -43,6 +43,7 @@ public class Tablero extends Canvas {
      */
     @Override
     public void paint(Graphics g) {
+
         //VARIABLES ( estas variables son el numero de fichas que se dibujaran por aspa depende del tablero elejido )
         //de arriba al cento
 
@@ -50,6 +51,7 @@ public class Tablero extends Canvas {
       //fin
         byte centroArriba = (byte) ((((casillas.length - 4) / 4) / 2)+1);
        
+
 
         //inicio 
         //-centroArriba

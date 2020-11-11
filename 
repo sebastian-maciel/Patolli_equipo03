@@ -1,0 +1,122 @@
+[33mcommit 50b2a5661f2e643ca9c87bf7aa65e3e3ba86eee0[m[33m ([m[1;36mHEAD -> [m[1;32mdesarrollo[m[33m)[m
+Author: Francisco Javier Barreras Cebreros <francisco.barreras203706@potros.itson.edu.mx>
+Date:   Wed Nov 11 00:33:10 2020 -0700
+
+    metodo paint en la clase tablero programado para funcionar con los diferentes tamanios de casillas  que se require en el juego
+
+[33mcommit 1da1c32ce74c732111e439becd025474680214a2[m
+Author: Francisco Javier Barreras Cebreros <francisco.barreras203706@potros.itson.edu.mx>
+Date:   Wed Nov 4 14:58:07 2020 -0700
+
+    avance en el metodo paint de tablero
+
+[33mcommit 5b6e3f022cb6b2d3a1d34ee91e2aaec37805b8bb[m
+Author: Francisco Javier Barreras Cebreros <francisco.barreras203706@potros.itson.edu.mx>
+Date:   Wed Oct 14 20:00:35 2020 -0700
+
+    actualizacion de paquetes y documentacion
+
+[33mcommit 0d7088cf3ef32bbed776cbab68088ef2945f4e9e[m
+Merge: e43c17f a3fd7c6
+Author: Jesus Murguia <37039536+JesusMurguia@users.noreply.github.com>
+Date:   Tue Oct 13 10:08:58 2020 -0700
+
+    Merge pull request #1 from Superatons23/IntegracionFrames
+    
+    se conectaron los frames y el boton salir se arregló
+
+[33mcommit a3fd7c62eeb0e5cd3bdf39bd07841be2c856e616[m
+Author: Jesus Murguia <jesusmurguiafac@gmail.com>
+Date:   Tue Oct 13 09:58:43 2020 -0700
+
+    se conectaron los frames y el boton salir se arregló
+
+[33mcommit e43c17fb84f886c400026b11c8e5b8acd200f02f[m
+Author: Francisco Javier Barreras Cebreros <francisco.barreras203706@potros.itson.edu.mx>
+Date:   Tue Oct 13 09:39:39 2020 -0700
+
+    metodo mover ficha arreglado
+
+[33mcommit cd6c302a8385269cfc86bc802928718b590bac19[m
+Author: Francisco Javier Barreras Cebreros <francisco.barreras203706@potros.itson.edu.mx>
+Date:   Mon Oct 12 16:46:10 2020 -0700
+
+    codigo paint(tablero) modificado
+
+[33mcommit 4c9332b686616536b990b4924a088a8ffda9a0a0[m
+Author: Francisco Javier Barreras Cebreros <francisco.barreras203706@potros.itson.edu.mx>
+Date:   Mon Oct 12 03:35:17 2020 -0700
+
+    actualizacion de documentacion
+
+[33mcommit 8871fc9c36198bef5ef051c1ccea641a2ded523f[m
+Author: Francisco Javier Barreras Cebreros <francisco.barreras203706@potros.itson.edu.mx>
+Date:   Mon Oct 12 03:03:39 2020 -0700
+
+    tablero actualizado
+
+[33mcommit 5834777e629900d1b98f2d36694d013bc90b9068[m
+Author: Francisco Javier Barreras Cebreros <francisco.barreras203706@potros.itson.edu.mx>
+Date:   Mon Oct 12 01:11:48 2020 -0700
+
+    color tablero arreglado
+
+[33mcommit 072fb44c9dc3717f00053bb665dc1e6a5ab715de[m
+Author: Francisco Javier Barreras Cebreros <francisco.barreras203706@potros.itson.edu.mx>
+Date:   Mon Oct 12 00:44:42 2020 -0700
+
+    modificacion paint casilla
+
+[33mcommit a753f03cef84d84779cab936de69cb288a022dee[m
+Author: Francisco Javier Barreras Cebreros <francisco.barreras203706@potros.itson.edu.mx>
+Date:   Sun Oct 11 20:22:56 2020 -0700
+
+    dominio terminado
+
+[33mcommit 2915d043375067c18eb2d091d9b8540e23c47c9a[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Ruben Cardoza <rubencardoza611@gmail.com>
+Date:   Sun Oct 11 19:03:50 2020 -0700
+
+    se arreglaron bugs
+
+[33mcommit cd377e7e483cc1240579c3c1dce2902125533b7c[m
+Author: Ruben Cardoza <rubencardoza611@gmail.com>
+Date:   Sun Oct 11 16:54:15 2020 -0700
+
+    interfaces mejoradas 2.0
+
+[33mcommit 2a570040189588459abee54457d08075e600eda5[m
+Author: Ruben Cardoza <rubencardoza611@gmail.com>
+Date:   Sun Oct 11 16:51:24 2020 -0700
+
+    interfaces mejoradas
+
+[33mcommit c897fa46c74d6617893e2f49467cd7cee81e048e[m
+Author: Ruben Cardoza <rubencardoza611@gmail.com>
+Date:   Sat Oct 3 00:09:51 2020 -0700
+
+    test
+
+[33mcommit 39ea1a5e82f3f09a7ab7ab08e422d8914369df2a[m
+Author: Ruben Cardoza <rubencardoza611@gmail.com>
+Date:   Sat Oct 3 00:07:40 2020 -0700
+
+    Se modificó el menu principal
+
+[33mcommit b0920847a6158f7c417749c4c6a3e1a8e7817780[m
+Author: Jesus Murguia <jesusmurguiafac@gmail.com>
+Date:   Mon Sep 28 18:54:14 2020 -0700
+
+    se agregaron mas frames y botones
+
+[33mcommit 40b3aadd87eb7916848c9837ea357e76f6f3b706[m
+Author: Jesus Murguia <jesusmurguiafac@gmail.com>
+Date:   Mon Sep 28 18:47:43 2020 -0700
+
+    se agregaron mas frames y botones
+
+[33mcommit 6f986ebd436689e517411321c05c21b35e0f39d0[m
+Author: javier barreras <javier_barreras23@hotmail.com>
+Date:   Mon Sep 28 18:20:29 2020 -0700
+
+    avance01
