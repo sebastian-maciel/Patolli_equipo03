@@ -27,7 +27,7 @@ public class FrmMain extends javax.swing.JFrame {
        //
    // 
     public FrmMain() {
-        tablero.setBounds(10, 10, 1280, 1280);
+        tablero.setSize(1200,1200);
         this.add(tablero);
        this.setExtendedState(this.MAXIMIZED_BOTH);
         initComponents();
@@ -124,7 +124,7 @@ public class FrmMain extends javax.swing.JFrame {
     
    public void avanzar()
    {
-      tablero.moverFicha(jugador_uno.getFichas()[0]);
+     // tablero.moverFicha(jugador_uno.getFichas()[0]);
    }
     
     public static void main(String args[]) {

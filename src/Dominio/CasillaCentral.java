@@ -40,10 +40,10 @@ public class CasillaCentral extends iCasilla{
         g.setColor(Color.BLACK);
         g.drawRect(getX(), getY(), getAlto(), getAncho());
         
-        if(getFichaUno()!=null){
+        if( getFichaUno()!=null){
             getFichaUno().setX(getX());
             getFichaUno().setY(getY());
-              getFichaUno().paint(g);
+            getFichaUno().paint(g);
         }
     
         

@@ -21,8 +21,10 @@ import java.awt.Rectangle;
  * @author javie
  */
 public class Tablero extends Canvas {
-
-    private iCasilla[] casillas = new iCasilla[60];
+//tablero de 68, 60 ,52,44
+           //14  12  10 08
+           //16  14  12 10
+  private iCasilla[] casillas = new iCasilla[52];
     private Caña cañas[];
 
     public void setCasillas(iCasilla[] casillas) {
@@ -41,217 +43,149 @@ public class Tablero extends Canvas {
      */
     @Override
     public void paint(Graphics g) {
-
-        byte j = 0;
-        byte k = 0;
-        byte l = 0;
-        byte p = 0;
-        byte m = 0;
-        byte n = 0;
-        byte y = 0;
-
         //VARIABLES ( estas variables son el numero de fichas que se dibujaran por aspa depende del tablero elejido )
         //de arriba al cento
-        byte arribaCentro = (byte) ((((casillas.length - 4) / 4) / 2) + 1);
-        //del centro a la izquierda
-        byte centroIzquierda = (byte) (arribaCentro - 1);
-        byte centroIzquierdaAux = (byte) ((centroIzquierda * 2) + 1);
-        // de la izquierda al centro
-        byte izquierdaCentro = (byte) (centroIzquierdaAux - 1);
-        byte izquierdaCentroAux = (byte) ((izquierdaCentro) + (arribaCentro + 1));
-        //del centro hacia bajo
-        byte centroAbajo = (byte) (izquierdaCentroAux - 1);
-        byte centroAbajoAux = (byte) (centroAbajo + arribaCentro);
-        //de abajo al centro
-        byte abajoCentro = (byte) (centroAbajoAux - 1);
-        byte abajoCentroAux = (byte) ((abajoCentro) + (arribaCentro + 1));
-        //del centro a la derecha
-        byte centroDerecha = (byte) (abajoCentroAux - 1);
-        byte centroDerechaAux = (byte) (centroDerecha + arribaCentro);
-        //de derecha al centro
-        byte derechaCentro = (byte) (centroDerechaAux - 1);
-        byte derechaCentroAux = (byte) (derechaCentro + arribaCentro + 1);
-        //del centro hacia arriba
-        byte centroArriba = (byte) (derechaCentroAux - 1);
-        byte centroArribaAux = (byte) (centroArriba + centroIzquierda+1);
 
-        System.out.println("arriba centro->" + arribaCentro);
-        System.out.println("centro Izquierda->" + centroIzquierda);
-        System.out.println("centroIzquierda 2->" + centroIzquierdaAux);
-        System.out.println("izquierda Centro->" + izquierdaCentro);
-        System.out.println("izquierdaCentro 2->" + izquierdaCentroAux);
-        System.out.println("centro Abajo->" + centroAbajo);
-        System.out.println("centroAbajo 2->" + centroAbajoAux);
-        System.out.println("abajo Centro ->" + abajoCentro);
-        System.out.println("Abajo Centro 2->" + abajoCentroAux);
-        System.out.println("centro Derecha->" + centroDerecha);
-        System.out.println("centro Derecha 2->" + centroDerechaAux);
-        System.out.println("derecha centro->" + derechaCentro);
-        System.out.println("derecha Centro2 ->" + derechaCentroAux);
-        System.out.println("centro Arriba ->" + centroArriba);
-        System.out.println("centro Arriba 2->" + centroArribaAux);
+        //inicio arribaCentro =0
+      //fin
+        byte centroArriba = (byte) ((((casillas.length - 4) / 4) / 2)+1);
+       
 
-        for (int i = 0; i < casillas.length; i++) {
-
-            if (i != arribaCentro && i < arribaCentro) { //se dibuja de arriba al centro
-                
-                if (casillas[i] == null) {
-                
-                    casillas[i] = new Casilla(600, 40 + 30 * i);
-                    casillas[i].paint(g);
-                } else {
-                    casillas[i].paint(g);
-                     
-                }
-
-            } else if (i > centroIzquierda && i < centroIzquierdaAux)//del centro a la izquierda
-            {
-                  
-                j++;
-                if (casillas[i] == null) {
-                   
-                    if (i == centroIzquierda+1) {
-                         
-
-                        casillas[i] = new CasillaCentral(600 - 30 * j, 280);
-
-                        casillas[i].paint(g);
-
-                    
-                   
-                } else {
-                        
-                    casillas[i] = new Casilla(600 - 30 * j, 280);
-                    casillas[i].paint(g);
-                }
-            }else{
-                
-                 casillas[i].paint(g); 
-              }
-            } else if (i > izquierdaCentro && i < izquierdaCentroAux)//de la izquierda al centro
-            {
-
-              
-                k++;
-                if(casillas[i]==null){
-                casillas[i] = new Casilla(330 + 30 * k, 310);
-                casillas[i].paint(g);
-                }else{
-                     casillas[i].paint(g);
-                }
-            } else if (i > centroAbajo && i < centroAbajoAux)//del centro hacia bajo
-            {
-                l++;
-                if(casillas[i]==null){
-                if (i == centroAbajo+1) {
-                    casillas[i] = new CasillaCentral(600, 340);
-                    casillas[i].paint(g);
-                } else {
-                    casillas[i] = new Casilla(600, 310 + 30 * l);
-                    casillas[i].paint(g);
-                }
-                }else{
-                     casillas[i].paint(g);
-                }
-
-            } else if (i > abajoCentro && i < abajoCentroAux)//de abajo al centro       
-            {
-                p++;
-                if(casillas[i]==null){
-                casillas[i] = new Casilla(630, 580 - 30 * p);
-                casillas[i].paint(g);
-                }else{
-                      casillas[i].paint(g);
-                }
-            } else if (i > centroDerecha && i < centroDerechaAux)//del centro a la derecha
-            {
-             
-                m++;
-                if(casillas[i]==null)
-                {
-                if (i == abajoCentroAux) {
-                    casillas[i] = new CasillaCentral(660, 310);
-                    casillas[i].paint(g);
-                } else {
-                    casillas[i] = new Casilla(630 + 30 * m, 310);
-                    casillas[i].paint(g);
-                }
-                }else {
-                     casillas[i].paint(g);
-                }
-            } else if (i > derechaCentro && i < derechaCentroAux)//de derecha al centro
-            {
-                n++;
-                if(casillas[i]==null){
-                casillas[i] = new Casilla(900 - 30 * n, 280);
-                casillas[i].paint(g);
-                }else{
-                     casillas[i].paint(g);
-                }
-                
-            } else if (i > centroArriba && i < centroArribaAux)//del centro hacia arriba
-            {
-                y++;
-                if(casillas[i]==null){
-                if (i == derechaCentroAux) {
-                    casillas[i] = new CasillaCentral(630, 250);
-                    casillas[i].paint(g);
-                } else {
-                    casillas[i] = new Casilla(630, 280 - 30 * y);
-                    casillas[i].paint(g);
-                  
-                }
-                }else{
-                    casillas[i].paint(g);
-                }
-            }
-        }
-
-    }
-
+        //inicio 
+        //-centroArriba
+        //fin
+        byte izquierdaCentro = (byte) ((byte) ((((casillas.length - 4) / 4) / 2) + 1)+ ((((casillas.length - 4) / 4) / 2)));
+        
+        //inicio
+        //-IzquierdaCentro
+         ///fin
+        byte centroIzquierda =(byte) ((byte) ((((casillas.length - 4) / 4) / 2) * 2+1)+((((casillas.length - 4) / 4) / 2) + 1));
+       
+        //inicio
+        //-centroIzquierda
+        //fin 
+        byte abajoCentro = (byte) (centroIzquierda +  ((((casillas.length - 4) / 4) / 2)));
+        
+        //inicio
+        //-abajoCentro
+        //fin
+        byte centroAbajo = (byte) (abajoCentro+((((casillas.length - 4) / 4) / 2)+1));
+        
+        //incio
+        //-centroAbajo
+        //fin
+        byte derechaCentro =(byte) (centroAbajo+((((casillas.length - 4) / 4) / 2)));
     
-    /**
-     * este metodo recibe la ficha a mover, una vez que encuentra
-     * la casilla en la que esta,se mueve a la siguiente casilla y la borra
-     * de donde estava.
-     * @param ficha 
-     */
-    public void moverFicha(Ficha ficha) {
         
-        for (int i = 0; i < casillas.length; i++) {
-          
-            
-            if (casillas[i].getFichaUno() != null) {
-                
-           
-                
-                if (casillas[i].getFichaUno().getColor().getColor() == ficha.getColor().getColor()) 
-                {
-                     
-                  
-                    
-                  
-                    if(i!=casillas.length-1)
-                    {
-                       
-                    
-                      casillas[i].setFichaUno(null);
-                    casillas[i+1].setFichaUno(ficha);
-                    }else{
-                        
-                         casillas[i].setFichaUno(null);
-                    casillas[0].setFichaUno(ficha);
-                    }
-                      i=casillas.length-1;
-                }
-            }
-           
-        }
+        //inicio
+        //-derechaCentro
+        //fin
+        byte centroArribaAux=(byte) (derechaCentro+((((casillas.length - 4) / 4) / 2))+1);
         
+        //inicio
+        //-centroArribaAux
+        //fin
+        byte arribaCentro=(byte) (centroArribaAux+((((casillas.length - 4) / 4) / 2)));
+        
+      
+
+
+       
+      //--------------------------//
+      //tablero de 14 por aspa
+      switch (casillas.length) {
+          case 68:
+              vertical(0, centroArriba, 560, 50,false,0, g);
+              horizontal(centroArriba, izquierdaCentro, 800, 290,true,centroArriba,  g);
+              horizontal(izquierdaCentro, centroIzquierda, 1070, 320,false,0, g);
+              vertical(centroIzquierda, abajoCentro, 560, 350,true,centroIzquierda, g);
+              vertical(abajoCentro, centroAbajo, 590, 320, false,0,g);
+              horizontal(centroAbajo, derechaCentro, 2120, 320,true, derechaCentro-1,  g);
+              horizontal(derechaCentro, centroArribaAux, 2360, 290, false,0,g);
+              vertical(centroArribaAux, arribaCentro, 590, 50,true, arribaCentro-1, g);
+              break;
+          case 60:
+              //-----------------------//
+              //tablero de 12 por aspa
+              
+              
+              vertical(0, centroArriba, 560, 80,false,0, g);
+              horizontal(centroArriba, izquierdaCentro, 770, 290,true,centroArriba, g);
+              horizontal(izquierdaCentro, centroIzquierda, 1010, 320,false,0, g);
+              vertical(centroIzquierda, abajoCentro, 560, 350,true,centroIzquierda, g);
+              vertical(abajoCentro, centroAbajo, 590, 320,false,0, g);
+              horizontal(centroAbajo, derechaCentro, 1940, 320,true, derechaCentro-1, g);
+              horizontal(derechaCentro, centroArribaAux, 2150, 290,false,0, g);
+              vertical(centroArribaAux, arribaCentro, 590, 80, true, arribaCentro-1,g);
+              break;
+          case 52:
+              //--------------------tablero de 10 por aspa-----------------//
+              
+              vertical(0, centroArriba, 560, 80,false,0, g);
+              horizontal(centroArriba, izquierdaCentro, 740, 260,true,centroArriba, g);
+              horizontal(izquierdaCentro, centroIzquierda, 950, 290,false,0, g);
+              vertical(centroIzquierda, abajoCentro, 560, 320,true,centroIzquierda, g);
+              vertical(abajoCentro, centroAbajo, 590, 290,false,0, g);
+              horizontal(centroAbajo, derechaCentro, 1760, 290,true, derechaCentro-1, g);
+              horizontal(derechaCentro, centroArribaAux, 1940, 260,false,0, g);
+              vertical(centroArribaAux, arribaCentro, 590, 80, true, arribaCentro-1,g);
+              break;
+          default:
+              //--------------------tablero de 08 por aspa-----------------//
+              
+              vertical(0, centroArriba, 560, 80, false,0,g);
+              horizontal(centroArriba, izquierdaCentro, 710, 230,true,centroArriba, g);
+              horizontal(izquierdaCentro, centroIzquierda, 890, 260,false,0, g);
+              vertical(centroIzquierda, abajoCentro, 560, 290,true,centroIzquierda, g);
+              vertical(abajoCentro, centroAbajo, 590, 260,false,0, g);
+              horizontal(centroAbajo, derechaCentro, 1580, 260,true, derechaCentro-1,g);
+              horizontal(derechaCentro, centroArribaAux, 1730, 230,false,0, g);
+              vertical(centroArribaAux, arribaCentro, 590, 80,true, arribaCentro-1,g);
+              break;
+      }
     }
 
     public iCasilla[] getCasillas() {
         return casillas;
+    }
+
+    private void vertical(int inicio, int fin,int x,int y, boolean casillaCentral,int posicionCasCentral,Graphics g) {
+byte j = -1;
+        for (int i = inicio; i < fin; i++) {
+      j++;
+            
+      if(casillaCentral && posicionCasCentral==i)
+      {
+          
+          casillas[i]= new CasillaCentral(x, y + 30 * j);
+      }else{
+            casillas[i] = new Casilla(x, y + 30 * j);
+           
+      }
+          
+            casillas[i].paint(g);
+            
+
+        }
+       
+    }
+
+    public void horizontal(int inicio,int fin,int x,int y,boolean casillaCentral,int posicionCasCentral,Graphics g) {
+byte j = -1;
+        for (int i = inicio; i < fin; i++) {
+             j++;
+             
+             if(casillaCentral && posicionCasCentral==i)
+             {
+                 casillas[i]=new CasillaCentral(x - 30 * i, y);
+             }else{
+            casillas[i] = new Casilla(x - 30 * i, y);
+             }
+            casillas[i].paint(g);
+             
+        }
+
+       
     }
     
     
