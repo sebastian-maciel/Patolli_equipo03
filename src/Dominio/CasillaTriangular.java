@@ -3,18 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebagraficos;
+package Dominio;
 
-import java.awt.Color;
 import java.awt.Graphics;
 
 /**
  *
- * @author javie
+ * @author javieextends
  */
-public class CasillaSemicircular extends iCasilla {
+public class CasillaTriangular extends iCasilla{
 
-    public CasillaSemicircular(int x, int y) {
+    public CasillaTriangular(int x, int y) {
         super(x, y);
     }
 
@@ -25,11 +24,7 @@ public class CasillaSemicircular extends iCasilla {
 
     @Override
     public void paint(Graphics g) {
-         g.setColor(Color.BLACK);
-        g.fillRect(getX(), getY(), getAlto(), getAncho());
-        //dibujar contorno
-        g.setColor(Color.BLACK);
-        g.drawRect(getX(), getY(), getAlto(), getAncho());
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

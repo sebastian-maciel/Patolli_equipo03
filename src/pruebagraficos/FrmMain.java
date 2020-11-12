@@ -5,6 +5,11 @@
  */
 package pruebagraficos;
 
+import Dominio.Tablero;
+import Dominio.Jugador;
+import Dominio.Ficha;
+import Dominio.CasillaCentral;
+import Dominio.Colores;
 import java.awt.Graphics;
 import javax.swing.JOptionPane;
 
@@ -15,19 +20,32 @@ import javax.swing.JOptionPane;
 public class FrmMain extends javax.swing.JFrame {
 
     
-    FrmEsperandoJugadores WaitingPlayers=new FrmEsperandoJugadores();
-      Tablero tablero = new Tablero();
+     private FrmEsperandoJugadores WaitingPlayers=new FrmEsperandoJugadores();
+      private Tablero tablero;
       //cse crea jugador
-      Jugador jugador_uno;
+     private Jugador jugador_uno;
+    
        //
    // 
     public FrmMain() {
-        tablero.setBounds(10, 10, 1280, 1280);
-        this.add(tablero);
+       
+       
+    }
+    
+     public FrmMain(int numeroCasillas) 
+     {
+      initComponents();
+          this.tablero = new Tablero(numeroCasillas);
+        tablero.setSize(1200,1200);
+       
        this.setExtendedState(this.MAXIMIZED_BOTH);
-        initComponents();
+      
         configurarJugador();
           desplegarFicha();
+           this.add(tablero);
+          this.setVisible(true);
+            
+      
        
     }
 
@@ -87,18 +105,19 @@ public class FrmMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButtonAvanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAvanzarActionPerformed
-     // desplegarFicha();
+        System.out.println("entre");
         avanzar();
         this.add(tablero);
+        
         
     }//GEN-LAST:event_jButtonAvanzarActionPerformed
 
     public void configurarJugador()
     {
        jugador_uno = new Jugador("javier",true,1000, new CasillaCentral(570,280));
-       jugador_uno.fichas[0]= new Ficha();
-       jugador_uno.fichas[0].setColor(Colores.NEGRO);
-        System.out.println("config->"+jugador_uno.fichas[0].getColor().getColor());
+       jugador_uno.getFichas()[0]= new Ficha();
+       jugador_uno.getFichas()[0].setColor(Colores.NEGRO);
+        System.out.println("config->"+jugador_uno.getFichas()[0].getColor().getColor());
    
         
        
@@ -112,14 +131,14 @@ public class FrmMain extends javax.swing.JFrame {
         {
            
             jugador_uno.getCasillaInicio().setFichaUno(jugador_uno.getFichas()[0]);
-            tablero.casillas[9]=jugador_uno.getCasillaInicio();
+            tablero.getCasillas()[9]=jugador_uno.getCasillaInicio();
         }
     }
     
     
    public void avanzar()
    {
-      tablero.moverFicha(jugador_uno.getFichas()[0]);
+     // tablero.moverFicha(jugador_uno.getFichas()[0]);
    }
     
     public static void main(String args[]) {

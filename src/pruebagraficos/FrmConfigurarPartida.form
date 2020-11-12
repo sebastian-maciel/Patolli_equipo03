@@ -42,7 +42,23 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="Casillas">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SansSerif" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Tama&#xf1;o del tablero:"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="240" y="450" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="SansSerif" size="18" style="1"/>
@@ -77,11 +93,34 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="260" y="480" width="317" height="91"/>
+          <AbsoluteConstraints x="260" y="520" width="317" height="91"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="CasillasCombo">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="chico"/>
+            <StringItem index="1" value="mediano"/>
+            <StringItem index="2" value="grande"/>
+            <StringItem index="3" value="ixachi"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CasillasComboActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="430" y="450" width="130" height="30"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBox2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="5">

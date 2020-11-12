@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebagraficos;
+package Dominio;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -12,42 +12,24 @@ import java.awt.Graphics;
  *
  * @author javie
  */
-public class CasillaCentral extends iCasilla{
+public class CasillaSemicircular extends iCasilla {
 
-    public CasillaCentral(int x, int y) {
+    public CasillaSemicircular(int x, int y) {
         super(x, y);
     }
-    
-      public CasillaCentral(Ficha fichaUno) {
-        this.fichaUno = fichaUno;
-       
-    }
-     
+
     @Override
     public void analizarJugada() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-/**
- * este metodo pintara un rectangulo de color amarillo con un 
- * contorno de color negro, represaentara las casillas centrales
- * @param g 
- */
+
     @Override
     public void paint(Graphics g) {
-            g.setColor(Color.YELLOW);
+         g.setColor(Color.BLACK);
         g.fillRect(getX(), getY(), getAlto(), getAncho());
         //dibujar contorno
         g.setColor(Color.BLACK);
         g.drawRect(getX(), getY(), getAlto(), getAncho());
-        
-        if(getFichaUno()!=null){
-            getFichaUno().setX(getX());
-            getFichaUno().setY(getY());
-              getFichaUno().paint(g);
-        }
-    
-        
-        
     }
     
 }

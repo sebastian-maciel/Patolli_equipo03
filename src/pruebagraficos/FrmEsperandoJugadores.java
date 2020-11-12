@@ -14,10 +14,26 @@ public class FrmEsperandoJugadores extends javax.swing.JFrame {
     /**
      * Creates new form FrmEsperandoJugadores
      */
+    int numeroCasillas;
     public FrmEsperandoJugadores() {
+        
         initComponents();
     }
 
+    public FrmEsperandoJugadores(int numeroCasillas) 
+    { 
+        initComponents();
+     
+        System.out.println("flag 2");
+this.numeroCasillas = numeroCasillas;        
+        this.setVisible(true); 
+        initComponents();
+        
+        
+        
+    }
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -89,9 +105,11 @@ public class FrmEsperandoJugadores extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        FrmMain main=new FrmMain();
-        main.setVisible(true);
-        this.dispose();
+        System.out.println("flag 3 ");
+       FrmMain main=new FrmMain(this.numeroCasillas);
+        
+       
+      //  this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -122,10 +140,8 @@ public class FrmEsperandoJugadores extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrmEsperandoJugadores().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new FrmEsperandoJugadores().setVisible(true);
         });
     }
 

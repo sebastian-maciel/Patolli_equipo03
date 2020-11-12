@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebagraficos;
+package Dominio;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -26,7 +26,7 @@ private final int ancho = 15;
 private final int alto = 15;
 private final int movimiento = 40;
 
-Colores color;
+ private Colores color;
     public Ficha(iCasilla casilla) {
        this.casilla=casilla;
     }
@@ -39,10 +39,15 @@ Colores color;
         this.color = color;
     }
 
-    Ficha() {
+   public Ficha() {
       
     }
-
+/**
+ * el siguiente metodo pinta un circulo relleno
+ * de color rosa con el contorno de color negro
+ * represantando la ficha.
+ * @param g 
+ */
     public void paint(Graphics g) {
         g.setColor(this.color.getColor());
         g.fillOval(x, y, alto, ancho);

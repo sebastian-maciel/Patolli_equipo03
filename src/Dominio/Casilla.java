@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebagraficos;
+package Dominio;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -32,7 +32,8 @@ public class Casilla extends iCasilla {
 
    
 /**
- * este metodo dibujara un rectangulo de color rosa con un contorno negro
+ * este metodo dibujara un rectangulo de color rosa 
+ * con un contorno negro
  * @param g 
  */
     @Override
