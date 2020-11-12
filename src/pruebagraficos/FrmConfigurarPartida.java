@@ -29,9 +29,11 @@ FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
 
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        Casillas = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        CasillasCombo = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         montoApuestaJug = new javax.swing.JLabel();
         montoApuestaJug1 = new javax.swing.JLabel();
@@ -48,10 +50,15 @@ FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 140, 30));
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 140, 30));
 
-        jLabel4.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Numero de fichas:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, -1));
+        Casillas.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        Casillas.setForeground(new java.awt.Color(255, 255, 255));
+        Casillas.setText("Tamaño del tablero:");
+        getContentPane().add(Casillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Numero de fichas:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pruebagraficos/imgs/button_crear-partida (1).png"))); // NOI18N
@@ -63,10 +70,18 @@ FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, 317, 91));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 520, 317, 91));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2", "3", "4", "5", "6" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 400, 130, 30));
+        CasillasCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "chico", "mediano", "grande", "ixachi" }));
+        CasillasCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CasillasComboActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CasillasCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 130, 30));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2", "3", "4", "5", "6" }));
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 400, 130, 30));
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,6 +112,10 @@ FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void CasillasComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CasillasComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CasillasComboActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,11 +153,13 @@ FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Casillas;
+    private javax.swing.JComboBox<String> CasillasCombo;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel montoApuestaJug;
