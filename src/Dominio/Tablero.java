@@ -24,8 +24,17 @@ public class Tablero extends Canvas {
 //tablero de 68, 60 ,52,44
            //14  12  10 08
            //16  14  12 10
-  private iCasilla[] casillas = new iCasilla[52];
+    
+  private iCasilla[] casillas ;
     private Caña cañas[];
+    int numeroCasillas;
+
+    public Tablero(int numeroCasillas) {
+        this.numeroCasillas = numeroCasillas;
+        casillas = new iCasilla[numeroCasillas];
+    }
+    
+    
 
     public void setCasillas(iCasilla[] casillas) {
         this.casillas = casillas;

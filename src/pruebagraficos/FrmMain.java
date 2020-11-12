@@ -21,18 +21,31 @@ public class FrmMain extends javax.swing.JFrame {
 
     
      private FrmEsperandoJugadores WaitingPlayers=new FrmEsperandoJugadores();
-      private Tablero tablero = new Tablero();
+      private Tablero tablero;
       //cse crea jugador
      private Jugador jugador_uno;
+    
        //
    // 
     public FrmMain() {
+       
+       
+    }
+    
+     public FrmMain(int numeroCasillas) 
+     {
+      initComponents();
+          this.tablero = new Tablero(numeroCasillas);
         tablero.setSize(1200,1200);
-        this.add(tablero);
+       
        this.setExtendedState(this.MAXIMIZED_BOTH);
-        initComponents();
+      
         configurarJugador();
           desplegarFicha();
+           this.add(tablero);
+          this.setVisible(true);
+            
+      
        
     }
 
@@ -92,9 +105,10 @@ public class FrmMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButtonAvanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAvanzarActionPerformed
-     // desplegarFicha();
+        System.out.println("entre");
         avanzar();
         this.add(tablero);
+        
         
     }//GEN-LAST:event_jButtonAvanzarActionPerformed
 

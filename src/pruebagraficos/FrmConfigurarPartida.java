@@ -12,7 +12,7 @@ package pruebagraficos;
  */
 public class FrmConfigurarPartida extends javax.swing.JFrame {
 FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
-
+int numeroCasillas = 44;
     /** Creates new form FrmConfigurarPartida */
     public FrmConfigurarPartida() {
         initComponents();
@@ -104,8 +104,9 @@ FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        waitingplayers.setVisible(true);
+        System.out.println("flag zero");
+        waitingplayers=new FrmEsperandoJugadores(this.numeroCasillas);
+      //  waitingplayers.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -114,7 +115,20 @@ FrmEsperandoJugadores waitingplayers=new FrmEsperandoJugadores();
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void CasillasComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CasillasComboActionPerformed
-        // TODO add your handling code here:
+       System.out.println(CasillasCombo.getSelectedItem());
+       
+       switch(CasillasCombo.getSelectedItem().toString())
+       {
+           case "chico": this.numeroCasillas=44;
+           break;
+           case "mediano": this.numeroCasillas=52;
+           break;
+           case "grande": this.numeroCasillas=60;
+           break;
+           case "ixachi": this.numeroCasillas=68;
+           break;
+       }
+       
     }//GEN-LAST:event_CasillasComboActionPerformed
 
     /**
